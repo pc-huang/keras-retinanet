@@ -80,7 +80,7 @@ def resnet_retinanet(num_classes, backbone=50, inputs=None, weights='imagenet', 
 
     # optionally load weights
     if weights_path:
-        model.load_weights(weights_path, by_name=True)
+        model.load_weights(weights_path, by_name=True, skip_mismatch=True)
 
     return model
 
